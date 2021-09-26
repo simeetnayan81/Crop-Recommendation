@@ -14,7 +14,7 @@ Accuracy: 99.54%
 
 - Download the Github Package from this repo and Unzip it anywhere.
 
-- Download and install Anaconda for Windows from this link[https://repo.anaconda.com/archive/Anaconda3-2021.05-Windows-x86_64.exe] or Jupyter for Windows from this link[https://jupyter.org/install].
+- Download and install Anaconda for Windows from this [link](https://repo.anaconda.com/archive/Anaconda3-2021.05-Windows-x86_64.exe) or Jupyter for Windows from this [link](https://jupyter.org/install).
 
 - Open Jupyter Notebook and navigate to the Crop-Recommendation folder.
 
