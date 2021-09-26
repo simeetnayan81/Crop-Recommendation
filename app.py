@@ -7,11 +7,16 @@ def pred(feat):
 	feat=pd.DataFrame(feat)
 	clf=joblib.load('GNBClassifier.pkl')
 	pred=clf.predict(feat)
-	s= "Recommended crop is " + str(pred[0])
-	st.write(s)
+	st.success('Recommended crop is {}'.format(str(pred[0])))
 
 
 def main():
+	html_temp = """ 
+    <div style ="background-color:yellow;padding:13px"> 
+    <h1 style ="color:black;text-align:center;">Crop Recommendation using ML</h1> 
+    </div> 
+    """
+	st.markdown(html_temp, unsafe_allow_html = True) 
 	st.title("Crop Recommendation App")
 	N=st.text_input("Ratio of Nitrogen Content in Soil", "")
 	P=st.text_input("Ratio of Phosphorous Content in Soil", "")
@@ -20,7 +25,7 @@ def main():
 	hum=st.text_input("Humidity", "")
 	ph=st.text_input("pH", "")
 	rain=st.text_input("Rainfall", "")
-	x=st.button("Reccomend")
+	x=st.button("Recommend")
 	l=[[N, P, K, temp, hum, ph, rain]]
 	if x:
 		pred(l)
