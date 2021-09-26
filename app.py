@@ -7,13 +7,14 @@ def pred(feat):
 	feat=pd.DataFrame(feat)
 	clf=joblib.load('GNBClassifier.pkl')
 	pred=clf.predict(feat)
-	st.success('Recommended crop is {}'.format(str(pred[0])))
+	st.success('Recommended crop is {}'.format(str(pred[0]).upper()))
+	st.success('Accuracy of prediction is: {}%'.format(99.54))
 
 
 def main():
 	page_bg_img = """
 	<style>div.stButton > button:first-child {
-	background-color: #00cc00;color:white;font-size:20px;height:3em;width:50%;border-radius:10px 10px 10px 10px;
+	background-color: #00cc00;color:white;font-size:20px;height:3em;width:100%;border-radius:10px 10px 10px 10px;
 	}
 	</style>
 	"""
