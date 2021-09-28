@@ -1,11 +1,11 @@
 import streamlit as st
 import sklearn
-import joblib
+from joblib import dump, load
 import pandas as pd
 
 def pred(feat):
 	feat=pd.DataFrame(feat)
-	clf=joblib.load('GNBClassifier.pkl')
+	clf=load('GNBClassifier.pkl')
 	pred=clf.predict(feat)
 	st.success('Recommended crop is {}'.format(str(pred[0]).upper()))
 	st.success('Accuracy of prediction is: {}%'.format(99.54))
