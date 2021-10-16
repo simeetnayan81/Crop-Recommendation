@@ -2,6 +2,12 @@
 
 ---
 
+## Link for the Application Webpage
+
+https://share.streamlit.io/simeetnayan81/crop-recommendation/main/app.py
+
+---
+
 ## Technical Description
 
 This app uses a Dataset with 2200 Datapoins for Training and for Generating predictions.</br>
